@@ -98,4 +98,4 @@ def view(news_id):
     f = open("data.json", "r")
     news_data = f.read()
     json_object = json.loads(news_data)
-    return render_template('view.html', data=json_object['articles'][0]['summary'])
+    return render_template('view.html', data=json_object['articles'][int(news_id)]['summary'])
